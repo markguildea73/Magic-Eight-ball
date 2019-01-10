@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Decisions Decision</title>
+</head>
+<body>
+    
+    <div class="headQ"></div>
+    <div>
+        <p><br/></p>
+    </div>
+    <input type="text" placeholder="Question">
+    <button type="button">Ask</button>
+    <div class="message"></div>
+    
+    <script>
+        const answerArray = [
+  "It is certain",
+  "It is decidedly so",
+  "Without a doubt",
+  "Yes – definitely",
+  "You may rely on it",
+  "As I see it, yes",
+  "Most likely",
+  "Outlook good",
+  "Yes",
+  "Signs point to yes",
+  "Don’t count on it",
+  "My reply is no",
+  "My sources say no",
+  "Outlook not so good",
+  "Very doubtful",
+  "Reply hazy, try again",
+  "Ask again later",
+  "Better not tell you now",
+  "Cannot predict now",
+  "Concentrate and ask again"
+];
+        const headQ = document.querySelector(".headQ")
+        const message = document.querySelector(".message");
+        const question = document.querySelector("input");
+        const button = document.querySelector("button");
+        //check the console to confirm these variables are working
+        
+        //interaction with button, invoke anonimous function and use decisions making
+        button.addEventListener("click", function(){
+            console.log(question.value);
+            let resp = Math.floor(Math.random()*answerArray.length);
+            //console.log(resp); confirm response
+            console.log(answerArray[resp]);
+            message.innerText = "Your Question was:" + question.value + "?"+ "\n" + "The Magic EightBall says:" +" " +"'"+answerArray[resp]+"'";
+            // use below to clear field after question
+            question.value="";
+        })
+        // function changeText(text)
+        // {
+        //     var display = document.getElementById('.headQ');
+        //     display.innerHTML = "";
+        //     display.innerHTML = text;
+        // }
+              
+        // function defaultText()
+        // {
+        //     var display = document.getElementById('.headQ');
+        //     display.innerHTML = "";
+        //     display.innerHTML = "What would you like to do?";
+        // }
+        
+        
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,19 @@
+.headQ {
+    margin-left: 10px;
+    width: 180px;
+    height: 15px;
+    padding: 10px;
+    border-top: 1px dashed #B8B8B8;
+    border-bottom: 1px dashed #B8B8B8;
+    text-align: center;
+    font-size: 14px;
+    color:blue;
+    
+}
+
+.headQ:before {
+  content: 'Ask the Magic Eight Ball';
+}
+.headQ:hover:before {
+  content: 'Or dont  ';
+}
